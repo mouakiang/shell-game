@@ -3,6 +3,9 @@
 const shell1Section = document.getElementById('shell1-section');
 const shell2Section = document.getElementById('shell2-section');
 const shell3Section = document.getElementById('shell3-section');
+console.log(shell1Section);
+console.log(shell2Section);
+console.log(shell3Section);
 
 const shell1Button = document.getElementById('shell1-button');
 const shell2Button = document.getElementById('shell2-button');
@@ -20,17 +23,17 @@ let total = 0;
 /* Events */
 shell1Button.addEventListener('click', () => {
     const correctPlace = getRandomHidingSpot();
-    handleGuess('shell1');
+    handleGuess('shell1', correctPlace);
 });
 
 shell2Button.addEventListener('click', () => {
     const correctPlace = getRandomHidingSpot();
-    handleGuess('shell2');
+    handleGuess('shell2', correctPlace);
 });
 
 shell3Button.addEventListener('click', () => {
     const correctPlace = getRandomHidingSpot();
-    handleGuess('shell3');
+    handleGuess('shell3', correctPlace);
 });
 
 function getRandomHidingSpot() {
@@ -42,16 +45,16 @@ function getRandomHidingSpot() {
 
     return correctPlace;
 }
-function handleGuess(userGuess) {
+function handleGuess(userGuess, correctPlace) {
     removeClasses();
 
-    if (correctPlace === 'userGuess') {
-        correctGuessesEl++;
+    if (correctPlace === userGuess) {
+        wins++;
     } else {
-        incorrectGuessesEl++;
+        losses++;
     }
 
-    totalGuessesEl++;
+    total++;
 
     correctGuessesEl.textContent = wins;
     incorrectGuessesEl.textContent = losses;
