@@ -40,6 +40,11 @@ main {
     margin-top: 150px;
 }
 
+/* .hiding-place { */
+/* position: relative; */
+/* z-index: 20; */
+/* } */
+
 .hiding-places {
     display: flex;
     justify-content: center;
@@ -62,4 +67,12 @@ main {
     display: flex;
     justify-content: space-evenly;
     margin: 10px;
+}
+
+.pearl::after {
+    font-size: 3rem;
+    position: absolute;
+    content: '⚪';
+    /* background-image: url(../assets/pearl.png); */
+    /* z-index: 30; */
 }

@@ -3,9 +3,6 @@
 const shell1Section = document.getElementById('shell1-section');
 const shell2Section = document.getElementById('shell2-section');
 const shell3Section = document.getElementById('shell3-section');
-console.log(shell1Section);
-console.log(shell2Section);
-console.log(shell3Section);
 
 const shell1Button = document.getElementById('shell1-button');
 const shell2Button = document.getElementById('shell2-button');
