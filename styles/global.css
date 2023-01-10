@@ -33,3 +33,31 @@ header .logo {
 main {
     padding: 20px;
 }
+
+.hiding-place img {
+    width: 300px;
+}
+
+.hiding-places {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#shell1-button {
+    margin-right: 240px;
+}
+
+#shell2-button {
+    margin-right: 240px;
+}
+
+.guesses-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
