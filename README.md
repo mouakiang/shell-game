@@ -25,3 +25,43 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+
+# HTML
+
+-3 Guess Buttons
+Why? To let the user guess and to increase the wins/losses and total count.
+How? buttonEl.addEventListener('click', () => {});
+-3 Shell images that hide the ball
+Why? Show the users correct guess by showing the hidden ball.
+How? img.classList.add('ball');
+-Wins Total
+Why? To show the user the amount of times they won.
+How? correctEl.textContent = correctGuesses;
+-Losses Total
+Why? To show the user the amount of times they lost.
+How? lossesEl.textContent = incorrectGuesses;
+-Total Games
+Why? To show the user the amount of times they have guessed total.
+How? totalEl.textContact = totalGuesses;
+
+# STATE
+
+-let winsTotal
+-let lossesTotal
+-let totalGames
+
+# EVENTS
+
+User clicks on a button to make a guess
+What happens when the user clicks on the guess button?
+Need more information (Which button did the user click and which one was correct?)
+1)Figure out which button the user clicked
+2)Come up with a random correct answer
+3)Compare the correct answer to whatever the user guessed
+4)If they guessed correct then to increment the correct guesses
+5)If they guessed incorrectly to increment the incorrect guesses
+6)Always increment total guesses
+Update STATE
+Update DOM with the new STATE
+7)Reveal the hiding ball
+8)Show the wins, losses and total games
