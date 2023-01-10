@@ -32,10 +32,12 @@ header .logo {
 
 main {
     padding: 20px;
+    background-image: url(../assets/background.jpg);
 }
 
 .hiding-place img {
     width: 300px;
+    margin-top: 150px;
 }
 
 .hiding-places {
