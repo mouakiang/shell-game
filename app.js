@@ -8,9 +8,9 @@ const shell1Button = document.getElementById('shell1-button');
 const shell2Button = document.getElementById('shell2-button');
 const shell3Button = document.getElementById('shell3-button');
 
-const correctGuesses = document.getElementById('correct-guesses');
-const incorrectGuesses = document.getElementById('incorrect-guesses');
-const totalGuesses = document.getElementById('total-guesses');
+const correctGuessesEl = document.getElementById('correct-guesses');
+const incorrectGuessesEl = document.getElementById('incorrect-guesses');
+const totalGuessesEl = document.getElementById('total-guesses');
 
 /* State */
 let wins = 0;
@@ -19,43 +19,53 @@ let total = 0;
 
 /* Events */
 shell1Button.addEventListener('click', () => {
+    const correctPlace = getRandomHidingSpot();
     handleGuess('shell1');
 });
 
 shell2Button.addEventListener('click', () => {
+    const correctPlace = getRandomHidingSpot();
     handleGuess('shell2');
 });
 
 shell3Button.addEventListener('click', () => {
+    const correctPlace = getRandomHidingSpot();
     handleGuess('shell3');
 });
 
+function getRandomHidingSpot() {
+    const hidingPlaces = ['shell1', 'shell2', 'shell3'];
+
+    const index = Math.floor(Math.random() * hidingPlaces.length);
+
+    const correctPlace = hidingPlaces[index];
+
+    return correctPlace;
+}
 function handleGuess(userGuess) {
-    shell1Section.classList.remove('pearl');
-    shell2Section.classList.remove('pearl');
-    shell3Section.classList.remove('pearl');
+    removeClasses();
 
-    const places = ['shell1', 'shell2', 'shell3'];
+    if (correctPlace === 'userGuess') {
+        correctGuessesEl++;
+    } else {
+        incorrectGuessesEl++;
+    }
 
-    const index = Math.floor(Math.random() * places.length);
+    totalGuessesEl++;
 
-    const correctPlace = places[index];
+    correctGuessesEl.textContent = wins;
+    incorrectGuessesEl.textContent = losses;
+    totalGuessesEl.textContent = total;
 
     const correctSection = document.getElementById(`${correctPlace}-section`);
 
     correctSection.classList.add('pearl');
+}
 
-    if (correctPlace === 'shell1') {
-        correctGuesses++;
-    } else {
-        incorrectGuesses++;
-    }
-
-    totalGuesses++;
-
-    correctGuesses.textContent = wins;
-    incorrectGuesses.textContent = losses;
-    totalGuesses.textContent = total;
+function removeClasses() {
+    shell1Section.classList.remove('pearl');
+    shell2Section.classList.remove('pearl');
+    shell3Section.classList.remove('pearl');
 }
 /* Display Functions */
 

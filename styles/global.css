@@ -63,9 +63,3 @@ main {
     justify-content: space-evenly;
     margin: 10px;
 }
-
-.pearl img {
-    width: 100px;
-    content: url(../assets/pearl.png);
-    position: absolute;
-}
