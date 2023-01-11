@@ -37,13 +37,8 @@ main {
 
 .hiding-place img {
     width: 300px;
-    margin-top: 150px;
+    margin-top: 30px;
 }
-
-/* .hiding-place { */
-/* position: relative; */
-/* z-index: 20; */
-/* } */
 
 .hiding-places {
     display: flex;
@@ -71,8 +66,15 @@ main {
 
 .pearl::after {
     font-size: 3rem;
-    position: absolute;
+    display: flex;
+    justify-content: center;
     content: '⚪';
-    /* background-image: url(../assets/pearl.png); */
-    /* z-index: 30; */
+}
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    color: rgb(168, 119, 119);
+    font-size: 3rem;
 }
