@@ -33,6 +33,8 @@ shell3Button.addEventListener('click', () => {
     handleGuess('shell3', correctPlace);
 });
 
+/* Display Functions */
+
 function getRandomHidingSpot() {
     const hidingPlaces = ['shell1', 'shell2', 'shell3'];
 
@@ -43,7 +45,7 @@ function getRandomHidingSpot() {
     return correctPlace;
 }
 function handleGuess(userGuess, correctPlace) {
-    removeClasses();
+    resetStyles();
 
     if (correctPlace === userGuess) {
         wins++;
@@ -62,11 +64,10 @@ function handleGuess(userGuess, correctPlace) {
     correctSection.classList.add('pearl');
 }
 
-function removeClasses() {
+function resetStyles() {
     shell1Section.classList.remove('pearl');
     shell2Section.classList.remove('pearl');
     shell3Section.classList.remove('pearl');
 }
-/* Display Functions */
 
 // (don't forget to call any display functions you want to run on page load!)

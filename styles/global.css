@@ -57,16 +57,31 @@ main {
 
 #shell1-button {
     margin-right: 240px;
+    border-radius: 5px;
+    background-color: rgb(216, 140, 152);
+    color: white;
+    padding: 4px 6px;
 }
 
 #shell2-button {
     margin-right: 240px;
+    border-radius: 5px;
+    background-color: rgb(216, 140, 152);
+    color: white;
+    padding: 4px 6px;
+}
+
+#shell3-button {
+    border-radius: 5px;
+    background-color: rgb(216, 140, 152);
+    color: white;
+    padding: 4px 6px;
 }
 
 .guesses-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 10px;
+    margin: 15px;
 }
 
 .pearl::after {
