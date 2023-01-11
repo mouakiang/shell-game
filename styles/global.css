@@ -40,6 +40,11 @@ main {
     margin-top: 30px;
 }
 
+.hiding-place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .hiding-places {
     display: flex;
     justify-content: center;
@@ -65,10 +70,12 @@ main {
 }
 
 .pearl::after {
+    position: absolute;
     font-size: 3rem;
-    display: flex;
+    display: block;
     justify-content: center;
     content: '⚪';
+    bottom: 370px;
 }
 
 .h1 {
