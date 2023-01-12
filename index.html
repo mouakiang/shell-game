@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>Shell Game</h1>
+        </header>
 
-</head>
+        <main>
+            <h1 class="h1">Find the pearl...</h1>
+            <section class="hiding-places">
+                <div id="shell1-section" class="hiding-place">
+                    <img src="./assets/shell.png" />
+                </div>
+                <div id="shell2-section" class="hiding-place">
+                    <img src="./assets/shell.png" />
+                </div>
+                <div id="shell3-section" class="hiding-place">
+                    <img src="./assets/shell.png" />
+                </div>
+            </section>
+            <section class="buttons">
+                <div>
+                    <button id="shell1-button">Guess</button>
+                    <button id="shell2-button">Guess</button>
+                    <button id="shell3-button">Guess</button>
+                </div>
+            </section>
 
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+            <section class="guesses-container">
+                <h3>Wins:<span id="correct-guesses">0</span></h3>
+                <h3>Losses:<span id="incorrect-guesses">0</span></h3>
+                <h3>Total:<span id="total-guesses">0</span></h3>
+            </section>
+            <div>
+        </main>
+    </body>
 </html>

@@ -32,4 +32,71 @@ header .logo {
 
 main {
     padding: 20px;
+    background-image: url(../assets/background.jpg);
+}
+
+.hiding-place img {
+    width: 300px;
+    margin-top: 30px;
+}
+
+.hiding-place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hiding-places {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#shell1-button {
+    margin-right: 240px;
+    border-radius: 5px;
+    background-color: rgb(216, 140, 152);
+    color: white;
+    padding: 4px 6px;
+}
+
+#shell2-button {
+    margin-right: 240px;
+    border-radius: 5px;
+    background-color: rgb(216, 140, 152);
+    color: white;
+    padding: 4px 6px;
+}
+
+#shell3-button {
+    border-radius: 5px;
+    background-color: rgb(216, 140, 152);
+    color: white;
+    padding: 4px 6px;
+}
+
+.guesses-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px;
+}
+
+.pearl::after {
+    position: absolute;
+    font-size: 3rem;
+    display: block;
+    justify-content: center;
+    content: '⚪';
+    bottom: 420px;
+}
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    color: rgb(168, 119, 119);
+    font-size: 3rem;
 }
